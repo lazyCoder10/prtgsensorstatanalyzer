@@ -78,7 +78,7 @@ public class IpNetworkStatisticsWorker implements Job {
     }
 
     public LinkedHashMap<String, String> apiConsumer(String prtgDataUrl) throws Exception {
-        //String prtgDataUrl = "http://114.130.56.155/api/table.json?noraw=1&content=channels&sortby=name&columns=name=textraw,lastvalue&id=2043&username=prtgadmin&password=Admin@321";
+        //String prtgDataUrl = "http://prtg_server_ip/api/table.json?noraw=1&content=channels&sortby=name&columns=name=textraw,lastvalue&id=2043&username=&password=";
         URL url = new URL(prtgDataUrl);
         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
         conn.setRequestMethod("GET");
