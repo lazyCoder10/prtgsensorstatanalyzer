@@ -8,8 +8,8 @@ public class FileCopyWorker {
 
     public void connect() throws JSchException {
         JSch jsch = new JSch();
-        session = jsch.getSession("root", "192.168.4.109", 22);
-        session.setPassword("123");
+        session = jsch.getSession("username", "ftp_ip", 22);
+        session.setPassword("password");
         session.setConfig("StrictHostKeyChecking", "no");
         session.connect();
     }

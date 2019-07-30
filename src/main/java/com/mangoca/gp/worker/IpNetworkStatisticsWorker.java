@@ -58,8 +58,8 @@ public class IpNetworkStatisticsWorker implements Job {
                         serviceIp = currentCell.getStringCellValue();
                     } else {
                         int deviceId = (int) currentCell.getNumericCellValue();
-                        apiUrl = "http://114.130.56.31/api/table.json?noraw=1&content=channels&sortby=name&" +
-                                "columns=name=textraw,lastvalue&id=" + deviceId + "&username=prtgadmingp&password=Admin@321";
+                        //put your prtg api here.for api details please see their documents
+                        apiUrl = "";
                         LinkedHashMap<String, String> serviceDataMap;
                         serviceDataMap = apiConsumer(apiUrl);
                         reportGenerator(serviceDataMap);
